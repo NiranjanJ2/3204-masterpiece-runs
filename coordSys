@@ -1,0 +1,28 @@
+from pybricks.hubs import PrimeHub
+from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSensor
+from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
+from pybricks.robotics import DriveBase
+from pybricks.tools import wait, StopWatch
+
+hub = PrimeHub()
+dt=DriveBase(Motor(Port.E, Direction.COUNTERCLOCKWISE), Motor(Port.A),56,83.75)
+dt.settings(5000,200,1000,200)
+dt.heading_control.pid(900,2,400,2,5)
+dt.distance_control.pid(1000,0,0,0,0)
+realtimeX=0
+realtimeY=0
+def coordSys(desiredX,desiredY,currentX,currentY):
+    errorX=desiredX-currentX
+    errorY=desiredY-currentY
+    cm=1/(176/360)
+    dist=math.sqrt(errorX**2+errorY**2)*cm
+    degrees=math.degrees(math.asin(errorX/dist))
+
+    if errorY<0:
+        if errorX<0:
+            degrees=-180-degrees
+        if errorX>0:
+            degrees=180-degrees
+    dt.turn(degrees)
+    dt.straight(dist)
+
