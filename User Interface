@@ -2,4 +2,4 @@ from RUN_1 import *
 from RUN_2 import *
 from RUN_3 import *
 from RUN_4 import *
-from coordSys import *
+from coordSys import coordSys
