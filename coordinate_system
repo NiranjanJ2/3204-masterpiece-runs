@@ -26,3 +26,50 @@ def coordSys(desiredX,desiredY,currentX,currentY):
     dt.turn(degrees)
     dt.straight(dist)
 
+
+#THIS IS IN CLASS FORM. UNTESTED#
+
+'''from pybricks.hubs import PrimeHub
+from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSensor
+from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
+from pybricks.robotics import GyroDriveBase
+from pybricks.tools import wait, StopWatch
+import umath
+hub = PrimeHub()
+dt=GyroDriveBase(Motor(Port.F, Direction.COUNTERCLOCKWISE), Motor(Port.B),56,83.75)
+#dt.settings(5000,200,1000,200)
+#dt.heading_control.pid(900,2,400,2,5)
+#dt.distance_control.pid(1000,0,0,0,0)
+class coordSys:
+    def __init__(self, startx, starty,startangle):
+        self.currentX=startx
+        self.currentY=starty
+        self.addAngle=startangle
+    def move(self,desiredX, desiredY):
+        dt.reset()
+        errorX=desiredX-self.currentX
+        errorY=desiredY-self.currentY
+        cm=1/(176/360)
+        dist=math.sqrt(errorX**2+errorY**2)*cm
+        degrees=math.degrees(math.asin(errorX/dist))
+
+        if errorY<0:
+            if errorX<0:
+                degrees=-180-degrees
+            if errorX>0:
+                degrees=180-degrees
+        dt.turn(degrees-addAngle)
+        self.addAngle+=dt.angle()
+        dt.reset()
+        dt.straight(dist)
+        self.currentX+=umath.sin(dt.angle())*dt.distance()
+        self.currentY+=umath.cos(dt.angle())*dt.distance()
+    def reset():
+        dt.reset()
+        self.currentX=0
+        self.currentY=0
+        self.addAngle=0
+
+coord=coordSys(0,0,0)
+coord.move(3,10)'''
+
