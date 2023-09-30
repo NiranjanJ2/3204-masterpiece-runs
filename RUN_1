@@ -31,15 +31,14 @@ def run1():
     dt.straight(540) #goes forward to push in printer
     dt.straight(-50) #backs out to turn
     dt.turn(45) # turns to go to stage
-    dt.straight(300) #goes to stage
-    dt.turn(50) # turns to position to stage
+    dt.straight(290) #goes to stage
+    dt.turn(55) # turns to position to stage
     dt.straight(180) #pushes in stage
     dt.straight(-220) #backs out
-    dt.turn(-90)# turns to go to aug
-    dt.straight(150) # goes aug reality mission
-    dt.turn(-5)
-    dt.straight(300)
-    dt.turn(40)
-    dt.straight(-150)
-    dt.turn(95)
-    dt.straight(15)
+    dt.turn(-140)# turns to go to aug
+    dt.straight(180) # goes aug reality mission
+    dt.turn(30)
+    dt.straight(100)
+    dt.turn(50)
+    dt.straight(-30)
+run1()
