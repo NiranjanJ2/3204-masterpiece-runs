@@ -1,5 +1,36 @@
+from pybricks.hubs import PrimeHub
+from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSensor
+from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
+from pybricks.robotics import DriveBase
+from pybricks.tools import wait, StopWatch
 from RUN_1 import *
 from RUN_2 import *
 from RUN_3 import *
 from RUN_4 import *
-from coordinate_system import coordSys
+
+hub = PrimeHub()
+runs=["run1()","run2()","run3()","run4()"]
+
+number=0
+hub.display.text('0')
+while True:
+    print(hub.buttons.pressed())
+    if len(hub.buttons.pressed())>0:
+        if hub.buttons.pressed()[0] == Button.RIGHT:
+            number+=1
+            if number==5:       
+                number=1
+            hub.display.text(str(number),on=750)
+
+    if len(hub.buttons.pressed())>0:
+        if hub.buttons.pressed()[0] == Button.LEFT:
+            number-=1
+            if number==0:
+                number=1
+            hub.display.text(str(number),on=750)
+
+    if len(hub.buttons.pressed())>0:
+        if hub.buttons.pressed()[0] == Button.BLUETOOTH:
+            eval(runs[number-1])
+
+
