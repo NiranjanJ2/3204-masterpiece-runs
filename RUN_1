@@ -5,7 +5,7 @@ from pybricks.robotics import DriveBase, GyroDriveBase
 from pybricks.tools import wait, StopWatch
 
 hub = PrimeHub()
-dt=GyroDriveBase(Motor(Port.F, Direction.COUNTERCLOCKWISE), Motor(Port.B),56,83.75)
+dt=GyroDriveBase(Motor(Port.F, Direction.COUNTERCLOCKWISE), Motor(Port.B),56,84)
 #dt.settings(5000,200,1000,200)
 #dt.heading_control.pid(900,2,400,2,5)
 #dt.distance_control.pid(1000,0,0,0,0)
@@ -28,17 +28,44 @@ def coordSys(desiredX,desiredY,currentX,currentY):
 
 def run1():
     
+    # dt.straight(540) #goes forward to push in printer
+    # dt.straight(-75) #backs out to turn
+    # dt.turn(45) # turns to go to stage
+    # dt.straight(230) #goes to stage
+    # dt.turn(45) # turns to position to stage
+    # dt.straight(200) #pushes in stage
+    # dt.straight(-200) #backs out
+    # dt.turn(-45)# turns to go to aug
+    # dt.straight(17.5)
+    # dt.turn(-70)
+    # dt.straight(400)
+    # dt.turn(45)
+    #dt.turn()
     dt.straight(540) #goes forward to push in printer
     dt.straight(-50) #backs out to turn
-    dt.turn(45) # turns to go to stage
-    dt.straight(290) #goes to stage
+    dt.turn(49) # turns to go to stage
+    dt.straight(240) #goes to stage
     dt.turn(55) # turns to position to stage
-    dt.straight(180) #pushes in stage
-    dt.straight(-220) #backs out
-    dt.turn(-140)# turns to go to aug
+    dt.straight(180, then=Stop.COAST) #pushes in stage
+    dt.straight(-200) #backs out
+    dt.turn(-130)# turns to go to aug
     dt.straight(180) # goes aug reality mission
-    dt.turn(30)
-    dt.straight(100)
-    dt.turn(50)
+    dt.turn(45)
+    wait(2000)
+    dt.straight(230) #weird
+    dt.turn(68)
+    dt.straight(-50)
+    #curve
+    print("curve")
+    dt.curve(-170,90)
     dt.straight(-30)
+    dt.curve(-100,80)
+    dt.straight(50)
+    dt.curve(125,130)
+    dt.straight(500)
+#    dt.straight(180) # goes aug reality mission
+#    dt.turn(30)
+#    dt.straight(100)
+#    dt.turn(50)
+#    dt.straight(-30)
 run1()
