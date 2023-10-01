@@ -41,22 +41,22 @@ def run1():
     # dt.straight(400)
     # dt.turn(45)
     #dt.turn()
-    dt.straight(540) #goes forward to push in printer
+    dt.straight(540, then=Stop.COAST) #goes forward to push in printer
     dt.straight(-56) #backs out to turn
     dt.turn(49) # turns to go to stage
-    dt.straight(240) #goes to stage
+    dt.straight(210) #goes to stage
     dt.turn(55) # turns to position to stage
     dt.straight(180, then=Stop.COAST) #pushes in stage
-    dt.straight(-200) #backs out
-    dt.turn(-120)# turns to go to aug
-    dt.straight(180) # goes aug reality mission
-    dt.turn(30)
+    dt.straight(-250) #backs out
+    dt.turn(-101.5)# turns to go to aug
+    # dt.straight() # goes aug reality mission
+    # dt.turn(20)
     #wait(2000)
-    dt.straight(230) #weird
+    dt.straight(430) #weird
     dt.turn(50)
     dt.straight(-50)
     #curve
-    #print("curve")
+    print("curve")  
     dt.curve(-170,90)
     dt.straight(-30)
     dt.curve(-100,80)
