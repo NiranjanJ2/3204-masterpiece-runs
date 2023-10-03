@@ -27,45 +27,23 @@ def coordSys(desiredX,desiredY,currentX,currentY):
     dt.straight(dist)
 
 def run1():
-    
-    # dt.straight(540) #goes forward to push in printer
-    # dt.straight(-75) #backs out to turn
-    # dt.turn(45) # turns to go to stage
-    # dt.straight(230) #goes to stage
-    # dt.turn(45) # turns to position to stage
-    # dt.straight(200) #pushes in stage
-    # dt.straight(-200) #backs out
-    # dt.turn(-45)# turns to go to aug
-    # dt.straight(17.5)
-    # dt.turn(-70)
-    # dt.straight(400)
-    # dt.turn(45)
-    #dt.turn()
     dt.straight(540, then=Stop.COAST) #goes forward to push in printer
-    dt.straight(-56) #backs out to turn
-    dt.turn(49) # turns to go to stage
+    dt.straight(-62) #backs out to turn
+    dt.turn(45.7) # turns to go to stage
     dt.straight(210) #goes to stage
-    dt.turn(55) # turns to position to stage
-    dt.straight(180, then=Stop.COAST) #pushes in stage
-    dt.straight(-250) #backs out
-    dt.turn(-101.5)# turns to go to aug
-    # dt.straight() # goes aug reality mission
-    # dt.turn(20)
-    #wait(2000)
-    dt.straight(430) #weird
-    dt.turn(50)
+    dt.turn(44) # turns to position to stage
+    dt.straight(255, then=Stop.COAST) #pushes in stage
+    dt.straight(-260) #backs out
+    dt.turn(-90)# turns to go to aug
+    dt.straight(480) #weird
+    dt.turn(60)
     dt.straight(-50)
     #curve
     print("curve")  
     dt.curve(-170,90)
     dt.straight(-30)
-    dt.curve(-100,80)
+    dt.curve(-110,80)
     dt.straight(50)
     dt.curve(125,130)
     dt.straight(500)
-#    dt.straight(180) # goes aug reality mission
-#    dt.turn(30)
-#    dt.straight(100)
-#    dt.turn(50)
-#    dt.straight(-30)
 run1()
