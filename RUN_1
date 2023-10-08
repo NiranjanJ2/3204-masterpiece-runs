@@ -27,6 +27,7 @@ def coordSys(desiredX,desiredY,currentX,currentY):
     dt.straight(dist)
 
 def run1():
+    print("We are a team! -Joseph Yoon")
     dt.straight(540, then=Stop.COAST) #goes forward to push in printer
     dt.straight(-62) #backs out to turn
     dt.turn(45.7) # turns to go to stage
@@ -37,14 +38,23 @@ def run1():
     dt.turn(-95)# turns to go to aug
     dt.straight(160)
     dt.turn(-45)
-    dt.straight(750)
-    dt.turn(88)
+    #dt.turn(-45)
+    dt.straight(725)
+    dt.curve(-40, -83)
     dt.straight(220)
-    dt.turn(25)
-    dt.straight(-175)
+    dt.turn(20)
+    dt.straight(-90)
     dt.turn(-110)
-    dt.straight(170)
-    dt.turn(45)
+    dt.straight(190)
+    dt.turn(52.5)
+    dt.straight(230)
+    dt.straight(-200)
+    dt.straight(230)
+    dt.straight(-180)    
+    dt.turn(-85)
+    dt.straight(150)
+    dt.turn(-25)
+    dt.straight(450)
     #curve
     '''print("curve")  
     dt.curve(-170,90)
