@@ -28,7 +28,7 @@ class coordSys:
         dt.turn(degrees-self.addAngle)
         self.addAngle+=dt.angle()
         dt.reset()
-        dt.straight(dist*-10)
+        dt.straight(dist*10)
         self.currentX+=errorY
         self.currentY+=errorX
 
@@ -37,3 +37,6 @@ class coordSys:
         self.currentX=0
         self.currentY=0
         self.addAngle=0
+
+grid=coordSys(0,0,0)
+grid.move(-11,15)
