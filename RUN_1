@@ -30,20 +30,27 @@ def run1():
     dt.straight(540, then=Stop.COAST) #goes forward to push in printer
     dt.straight(-62) #backs out to turn
     dt.turn(45.7) # turns to go to stage
-    dt.straight(210) #goes to stage
+    dt.straight(243) #goes to stage
     dt.turn(44) # turns to position to stage
     dt.straight(255, then=Stop.COAST) #pushes in stage
-    dt.straight(-260) #backs out
-    dt.turn(-90)# turns to go to aug
-    dt.straight(480) #weird
-    dt.turn(60)
-    dt.straight(-50)
+    dt.straight(-240) #backs out
+    dt.turn(-95)# turns to go to aug
+    dt.straight(160)
+    dt.turn(-45)
+    dt.straight(750)
+    dt.turn(88)
+    dt.straight(220)
+    dt.turn(25)
+    dt.straight(-175)
+    dt.turn(-110)
+    dt.straight(170)
+    dt.turn(45)
     #curve
-    print("curve")  
+    '''print("curve")  
     dt.curve(-170,90)
     dt.straight(-30)
     dt.curve(-110,80)
     dt.straight(50)
     dt.curve(125,130)
-    dt.straight(500)
+    dt.straight(500)'''
 run1()
