@@ -1,1 +1,28 @@
 # Insert run 2 here
+
+from pybricks.hubs import PrimeHub
+from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSensor
+from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
+from pybricks.robotics import DriveBase, GyroDriveBase
+from pybricks.tools import wait, StopWatch
+
+dt=DriveBase(Motor(Port.F, Direction.COUNTERCLOCKWISE), Motor(Port.B),56,84)
+dt.settings(77)
+example_motor = Motor(Port.C)
+#example_motor.settings()
+def run2():
+    #example_motor.dc(-70)
+    dt.straight(125)
+    dt.straight(-130)
+    dt.turn(25)
+    dt.straight(140)
+    wait(500)
+    dt.straight(-120)
+    
+    
+    wait(3500)
+
+run2()
+
+
+
