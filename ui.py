@@ -54,8 +54,8 @@ def run2():
 def run3():
     dt=GyroDriveBase(Motor(Port.F, Direction.COUNTERCLOCKWISE), Motor(Port.B),56,84)
     dt.straight(230)
-    dt.turn(45)
-    dt.turn(-45)
+    dt.turn(35)
+    dt.turn(-35)
     dt.straight(-230)
     dt.reset()
 def run4():
