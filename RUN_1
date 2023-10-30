@@ -1,66 +1,40 @@
 from pybricks.hubs import PrimeHub
 from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSensor
 from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
-from pybricks.robotics import DriveBase, GyroDriveBase
+from pybricks.robotics import GyroDriveBase
 from pybricks.tools import wait, StopWatch
 
 hub = PrimeHub()
-dt=GyroDriveBase(Motor(Port.F, Direction.COUNTERCLOCKWISE), Motor(Port.B),56,84)
-#dt.settings(5000,200,1000,200)
-#dt.heading_control.pid(900,2,400,2,5)
-#dt.distance_control.pid(1000,0,0,0,0)
-realtimeX=0
-realtimeY=0
-def coordSys(desiredX,desiredY,currentX,currentY):
-    errorX=desiredX-currentX
-    errorY=desiredY-currentY
-    cm=1/(176/360)
-    dist=math.sqrt(errorX**2+errorY**2)*cm
-    degrees=math.degrees(math.asin(errorX/dist))
-
-    if errorY<0:
-        if errorX<0:
-            degrees=-180-degrees
-        if errorX>0:
-            degrees=180-degrees
-    dt.turn(degrees)
-    dt.straight(dist)
-
 def run1():
+    dt=GyroDriveBase(Motor(Port.F, Direction.COUNTERCLOCKWISE), Motor(Port.B),56,84)
     print("We are a team! -Joseph Yoon")
     dt.straight(540, then=Stop.COAST) #goes forward to push in printer
-    dt.straight(-62) #backs out to turn
+    dt.straight(-92) #backs out to turn
     dt.turn(45.7) # turns to go to stage
     dt.straight(243) #goes to stage
     dt.turn(44) # turns to position to stage
     dt.straight(255, then=Stop.COAST) #pushes in stage
-    dt.straight(-240) #backs out
-    dt.turn(-95)# turns to go to aug
+    dt.straight(-230) #backs out
+    dt.turn(-90)# turns to go to aug
     dt.straight(160)
-    dt.turn(-45)
+    dt.turn(-42.5)
     #dt.turn(-45)
-    dt.straight(725)
-    dt.curve(-40, -83)
-    dt.straight(220)
-    dt.turn(20)
-    dt.straight(-90)
-    dt.turn(-110)
-    dt.straight(190)
+    dt.straight(755)
+    dt.curve(-40, -90)
+    dt.straight(280)
+    dt.straight(-200)
+    dt.turn(-50)
+    dt.straight(150)
+    dt.turn(-35)
+    dt.straight(150)
     dt.turn(52.5)
     dt.straight(230)
     dt.straight(-200)
     dt.straight(230)
     dt.straight(-180)    
     dt.turn(-85)
-    dt.straight(150)
+    dt.straight(120)
     dt.turn(-25)
     dt.straight(450)
-    #curve
-    '''print("curve")  
-    dt.curve(-170,90)
-    dt.straight(-30)
-    dt.curve(-110,80)
-    dt.straight(50)
-    dt.curve(125,130)
-    dt.straight(500)'''
+    dt.reset()
 run1()
