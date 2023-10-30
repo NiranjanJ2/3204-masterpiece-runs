@@ -1,0 +1,31 @@
+# Insert run 2 here
+
+from pybricks.hubs import PrimeHub
+from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSensor
+from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
+from pybricks.robotics import DriveBase, GyroDriveBase
+from pybricks.tools import wait, StopWatch
+
+#dt=GyroDriveBase(Motor(Port.F, Direction.COUNTERCLOCKWISE), Motor(Port.B),56,84)
+#dt.settings(5000,200,1000,200)
+#dt.heading_control.pid(900,2,400,2,5)
+#dt.distance_control.pid(1000,0,0,0,0)
+#example_motor = Motor(Port.C)
+#example_motor.settings()
+def run3():
+    dt=GyroDriveBase(Motor(Port.F, Direction.COUNTERCLOCKWISE), Motor(Port.B),56,84)
+    #example_motor.dc(-70)
+    dt.settings(300)
+    dt.straight(525)
+    dt.straight(-245)
+    dt.turn(7)
+    dt.straight(275)
+    wait(500)
+    dt.straight(-300)
+    dt.turn(42.5)
+    dt.settings(800,400)
+    dt.straight(1200)
+    dt.turn(30)
+    dt.straight(260)
+    dt.reset()
+run3()
