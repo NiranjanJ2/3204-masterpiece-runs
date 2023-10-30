@@ -1,0 +1,33 @@
+from pybricks.hubs import PrimeHub
+from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSensor
+from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
+from pybricks.robotics import GyroDriveBase
+from pybricks.tools import wait, StopWatch
+
+
+hub = PrimeHub()
+def run6():
+    dt=GyroDriveBase(Motor(Port.F, Direction.COUNTERCLOCKWISE), Motor(Port.B),56,84)
+    dt.straight(400)
+    dt.turn(-50)
+    dt.straight(260)
+    dt.turn(-40)
+    dt.straight(550)
+    dt.turn(90)
+    dt.straight(120)
+    dt.straight(-150)
+
+    dt.turn(90)
+    dt.straight(150)
+    dt.turn(-85)
+    dt.straight(275) #changed dont change
+    dt.turn(-80)
+    dt.settings(200,100)
+    dt.straight(-185)
+    dt.turn(90)
+    dt.straight(-285)
+    dt.turn(45)
+    dt.straight(300)
+    dt.turn(-65)
+    dt.reset()
+run6()
