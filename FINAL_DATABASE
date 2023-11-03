@@ -1,0 +1,104 @@
+from pybricks.hubs import PrimeHub
+from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSensor
+from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
+from pybricks.robotics import GyroDriveBase, DriveBase
+from pybricks.tools import wait, StopWatch
+
+hub = PrimeHub()
+def run1():
+    dt=GyroDriveBase(Motor(Port.F, Direction.COUNTERCLOCKWISE), Motor(Port.B),56,84)
+    print("We are a team! -Joseph Yoon")
+    dt.straight(540, then=Stop.COAST) #goes forward to push in printer
+    dt.straight(-92) #backs out to turn
+    dt.turn(45.7) # turns to go to stage
+    dt.straight(243) #goes to stage
+    dt.turn(44) # turns to position to stage
+    dt.straight(255, then=Stop.COAST) #pushes in stage
+    dt.straight(-230) #backs out
+    dt.turn(-90) # turns to go across the map
+    dt.straight(160) # going forward
+    dt.turn(-42.5) # turning
+    dt.straight(755) # going to immersive experience (ir)
+    dt.curve(-40, -90) # turning to ir
+    dt.straight(280) # pushing down ir
+    dt.straight(-200) # backing out 
+    dt.turn(-50) # turning to theater scene change (tsg)
+    dt.straight(150) # going forward to tsg
+    dt.turn(-35) # turning to tsg
+    dt.straight(150) # going forward to tsg
+    dt.turn(52.5) # turning to tsg
+    dt.straight(230) # turning tsg 1
+    dt.straight(-200) # backing out
+    dt.straight(230) #turning tsg 2
+    dt.straight(-180) # backing out  
+    dt.turn(-85) # to home base
+    dt.straight(120) # to home base
+    dt.turn(-25) # to home base
+    dt.straight(450, Stop.COAST) # to home base
+    dt.reset() # reset drivetrain
+def run2():
+    dt=GyroDriveBase(Motor(Port.F, Direction.COUNTERCLOCKWISE), Motor(Port.B),56,84)
+    dt.straight(230) # forward to dragon
+    dt.turn(30) #turn to do dragon
+    dt.turn(-30) # turn back to home base
+    dt.straight(-230, Stop.COAST) # back to home base
+    dt.reset()
+def run3():
+    dt=GyroDriveBase(Motor(Port.F, Direction.COUNTERCLOCKWISE), Motor(Port.B),56,84)
+    #example_motor.dc(-70)
+    dt.settings(300) # pidva definition
+    dt.straight(525) # goes to mixer
+    dt.straight(-245) # backs out
+    dt.turn(7) # turns to do the more mixer
+    dt.straight(275) # does more mixer
+    wait(500)
+    dt.straight(-300) # backs out
+    dt.turn(42.5) # turns to go to home base
+    dt.settings(750,300) #changes pidva
+    dt.straight(1000) # goes to home
+    dt.turn(30) # going to home
+    dt.straight(500, Stop.COAST) # going to home
+    dt.reset()
+def run4():
+    dt=GyroDriveBase(Motor(Port.F, Direction.COUNTERCLOCKWISE), Motor(Port.B),56,84)
+    dt.settings(750,300,45) # pidva
+    arm=Motor(Port.E, Direction.CLOCKWISE,gears=[12,28]) # arm definition
+    dt.straight(320) # forward to rollercoaster
+    arm.run_angle(1000,135) # turns to get camera
+    dt.straight(320) # pushes camera and boat
+    arm.run_angle(-1000,130) # releases camera
+    dt.turn(-12) # turns
+    dt.straight(-750, Stop.COAST) # back to home
+    dt.reset()
+def run5():
+    dt=GyroDriveBase(Motor(Port.F, Direction.COUNTERCLOCKWISE), Motor(Port.B),56,84)
+    chickengear=Motor(Port.C,Direction.CLOCKWISE) 
+    dt.settings(600, 300) # pidva
+    dt.straight(412) # goes to chicken mission
+    chickengear.run_time(-1000,7500) # turns chicken
+    dt.straight(-420, Stop.COAST) #
+    dt.reset()
+def run6():
+    dt=GyroDriveBase(Motor(Port.F, Direction.COUNTERCLOCKWISE), Motor(Port.B),56,84)
+    dt.straight(400)
+    dt.turn(-50)
+    dt.straight(260)
+    dt.turn(-40)
+    dt.straight(550)
+    dt.turn(90)
+    dt.straight(120)
+    dt.straight(-150)
+
+    dt.turn(90)
+    dt.straight(150)
+    dt.turn(-85)
+    dt.straight(275) #changed dont change
+    dt.turn(-80)
+    dt.settings(200,100)
+    dt.straight(-185)
+    dt.turn(90)
+    dt.straight(-285)
+    dt.turn(45)
+    dt.straight(300)
+    dt.turn(-65, Stop.COAST)
+    dt.reset()
