@@ -1,0 +1,146 @@
+from pybricks.hubs import PrimeHub
+from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSensor
+from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
+from pybricks.robotics import DriveBase
+from pybricks.tools import wait, StopWatch
+hub = PrimeHub()
+armleft=Motor(Port.E)
+armright=Motor(Port.C)
+dt=DriveBase(Motor(Port.F, Direction.COUNTERCLOCKWISE), Motor(Port.B),56,84)
+dt.use_gyro(True)
+dt.settings(turn_rate=70)
+dt.turn(45)
+dt.straight(320)
+dt.turn(-75)
+dt.straight(300)
+dt.settings(600, 600, 600, 600)
+dt.straight(-200)
+dt.turn(30)
+dt.straight(350)
+dt.turn(-50)
+dt.use_gyro(False)
+dt.straight(200)
+dt.straight(-100)
+dt.straight(150)
+dt.straight(-100)
+dt.use_gyro(True)
+armright.run_angle(1000,-50)
+dt.curve(-60, -45)
+dt.straight(105)
+dt.curve(42, 90)
+dt.straight(125)
+dt.turn(10)
+dt.straight(50)
+dt.turn(-25)
+dt.straight(-20)
+armleft.run_angle(500, 800)
+armleft.run_angle(-1200, 800)
+dt.straight(-100)
+dt.turn(20)
+armright.run_angle(1200,50)
+dt.straight(505)
+dt.curve(80, -90)
+dt.turn(15)
+dt.straight(-100)
+dt.turn(45)
+dt.turn(-45)
+dt.straight(-75)
+dt.turn(75)
+dt.straight(150)
+dt.turn(20)
+dt.turn(-20)
+dt.straight(-150)
+dt.turn(65)
+
+
+
+
+dt.curve(120, 30)
+dt.turn(20)
+dt.straight(-60)
+dt.turn(45)
+dt.straight(100)
+dt.turn(15)
+dt.turn(-15)
+dt.straight(-100)
+dt.turn(20)
+dt.straight(80)
+dt.turn(30)
+dt.straight(50)
+armleft.run_angle(600, 1200)
+dt.turn(21.5)
+dt.straight(63)
+dt.turn(-10)
+armleft.run_angle(800, -500)
+
+
+
+
+
+
+
+
+###############BRYANS VERSION######################
+from pybricks.hubs import PrimeHub
+from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSensor
+from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
+from pybricks.robotics import DriveBase
+from pybricks.tools import wait, StopWatch
+hub = PrimeHub()
+armleft=Motor(Port.E)
+armright=Motor(Port.C)
+dt=DriveBase(Motor(Port.F, Direction.COUNTERCLOCKWISE), Motor(Port.B),56,84)
+dt.use_gyro(True)
+dt.settings(turn_rate=70)
+dt.turn(45)
+dt.straight(320)
+dt.turn(-75)
+dt.straight(300)
+dt.settings(600, 600, 600, 600)
+dt.straight(-200)
+dt.turn(30)
+dt.straight(350)
+dt.turn(-50)
+dt.use_gyro(False)
+dt.straight(200)
+dt.straight(-100)
+dt.straight(150)
+dt.straight(-100)
+dt.use_gyro(True)
+armright.run_angle(1000,-50)
+dt.curve(-60, -45)
+dt.straight(70)
+dt.curve(42, 90)
+dt.straight(130)
+dt.curve(-2,17.5)
+armleft.run_angle(500, 800)
+armleft.run_angle(-1200, 800)
+dt.straight(-100)
+dt.turn(17.5)
+armright.run_angle(1200,50)
+dt.straight(550)
+dt.curve(100, -90)
+dt.curve(100, 45)
+dt.straight(-100)
+
+
+
+
+
+dt.curve(120, 30)
+dt.turn(20)
+dt.straight(-60)
+dt.turn(45)
+dt.straight(100)
+dt.turn(15)
+dt.turn(-15)
+dt.straight(-100)
+dt.turn(20)
+dt.straight(80)
+dt.turn(30)
+dt.straight(50)
+armleft.run_angle(600, 1200)
+dt.turn(21.5)
+dt.straight(63)
+dt.turn(-10)
+armleft.run_angle(800, -500)
