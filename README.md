@@ -8,3 +8,5 @@ This also helps in the case of the UI, where we have to import files.
 People who purposely mess with code will have their access revoked and will live in shame
 
 PROGRAMMING IS MOSTLY COMPLETE. ONLY EDIT DURING TESTING AND PNEUMATICS.
+
+rip regionals 😭
